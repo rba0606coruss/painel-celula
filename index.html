@@ -437,6 +437,18 @@
 
             document.getElementById('tab-vigilias-period').innerHTML = `Escala de ${nomeDoMes(mes)} de ${ano}`;
 
+
+            const alertaLink = `
+                <div class="mb-4 p-3 bg-amber-50 border-l-4 border-amber-500 rounded flex items-center gap-2 shadow-sm">
+                    <span class="text-lg">⚠️</span>
+                    <a href="https://vigiliash.web.app/app/pages/home.html?t=YzJoaGJHOXRYMkp5WVhOcGJHbGg7CgkJCVUyaGhiRzl0SUVKeVlYUHRiR2xoOwoJCQliV2x6YzJGdg==" 
+                       target="_blank" 
+                       class="text-amber-800 font-bold text-xs uppercase hover:underline">
+                       Clique aqui para acesso ao link das vigilias
+                    </a>
+                </div>
+`;
+
             // Grupos fixos conforme solicitado
             const grupoA = `
                 <span class="name-balloon"><strong>Larissa</strong></span>
@@ -470,7 +482,7 @@
             // Ajuste do Dia 7: No mês par (Abril) vira 1º horário
             const label_dia7 = isPar ? "1º horário (22:00 - 02:00)" : "2º horário (02:00 - 06:00)";
 
-            container.innerHTML = `
+            container.innerHTML = alertaLink + `
                 <div class="mb-4 p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
                     <div class="space-y-6">
                         <div>
